@@ -4,29 +4,37 @@
 // Created on: Mar 2022
 // This file contains the JS functions for index.html
 
+;("use strict")
+
 /**
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2O-Unit-5-02-HTML/sw.js", {
+    scope: "/ICS2O-Unit-5-02-HTML/",
   })
 }
 
-;("use strict")
 /**
- * This function calculates area of a parrallelogram.
+ * This function compares slider with random number.
  */
-function calculate() {
-  // input
-  const length = parseInt(document.getElementById("length-of-pyramid").value)
-  const width = parseInt(document.getElementById("width-of-pyramid").value)
-  const height = parseInt(document.getElementById("height-of-pyramid").value)
+function myButtonClicked() {
+  const rRated = parseInt(document.getElementById("r-rated").value)
+  const pg = parseInt(document.getElementById("pg").value)
+  const gRated = parseInt(document.getElementById("g-rated").value)
 
   // process
-  const volume = (length * width * height) / 3
-
-  // output
-  document.getElementById("answers").innerHTML =
-    "Volume is: " + volume.toFixed(2) + " cm³"
+  if (rRated == true) {
+    document.getElementById("r-rated").innerHTML =
+      "You can watch a R rated movie alone."
+  } else if (pg == true) {
+    document.getElementById("answers").innerHTML =
+      "You can watch a PG-13 rated movie."
+  } else if (gRated == true) {
+    document.getElementById("answers").innerHTML =
+      "You can watch a G of a PG rated movie."
+  } else {
+    document.getElementById("answers").innerHTML =
+      "You are too young for most things."
+  }
 }

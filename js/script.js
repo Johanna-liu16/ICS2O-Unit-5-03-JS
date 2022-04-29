@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Johanna Liu All rights reserved
+// Copyright (c) 2022 Johanna Liu All rights reserved
 //
 // Created by: Johanna Liu
 // Created on: Mar 2022
@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit-5-02-HTML/sw.js", {
-    scope: "/ICS2O-Unit-5-02-HTML/",
+  navigator.serviceWorker.register("/ICS2O-Unit-5-03-JS/sw.js", {
+    scope: "/ICS2O-Unit-5-03-JS/",
   })
 }
 
@@ -19,9 +19,9 @@ if (navigator.serviceWorker) {
  * This function compares slider with random number.
  */
 function myButtonClicked() {
-  const rRated = parseInt(document.getElementById("r-rated").value)
-  const pg = parseInt(document.getElementById("pg").value)
-  const gRated = parseInt(document.getElementById("g-rated").value)
+  var rRated = parseInt(document.getElementById("r-rated").value)
+  var pg = parseInt(document.getElementById("pg").value)
+  var gRated = parseInt(document.getElementById("g-rated").value)
 
   // process
   if (rRated == true) {

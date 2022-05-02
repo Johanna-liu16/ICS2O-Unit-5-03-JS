@@ -35,6 +35,6 @@ function myButtonClicked() {
         "You are eligible to watch G and PG rated movies alone."
   } else {
       document.getElementById("answers").innerHTML = 
-        "You are most likely not eligible to watch any rated movies alone."
+        "You are too young for most things."
   }
 }

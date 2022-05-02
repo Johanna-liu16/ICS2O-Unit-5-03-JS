@@ -19,22 +19,22 @@ if (navigator.serviceWorker) {
  * This function compares slider with random number.
  */
 function myButtonClicked() {
-  var rRated = parseInt(document.getElementById("r-rated").value)
-  var pg = parseInt(document.getElementById("pg").value)
-  var gRated = parseInt(document.getElementById("g-rated").value)
-
-  // process
-  if (rRated == true) {
-    document.getElementById("r-rated").innerHTML =
-      "You can watch a R rated movie alone."
-  } else if (pg == true) {
-    document.getElementById("answers").innerHTML =
-      "You can watch a PG-13 rated movie."
-  } else if (gRated == true) {
-    document.getElementById("answers").innerHTML =
-      "You can watch a G of a PG rated movie."
+  //input
+  const seventeenUp = document.getElementById("seventeenUp").checked
+  const thirteenUp = document.getElementById("thirteenUp").checked
+  const fiveUp = document.getElementById("fiveUp").checked
+  //process
+  if (seventeenUp == true) {
+    document.getElementById("answers").innerHTML = 
+      "You can to watch R-rated movies."
+  } else if (thirteenUp == true) {
+      document.getElementById("answers").innerHTML = 
+        "You can watch PG-13 rated movies."
+  } else if (fiveUp == true) {
+      document.getElementById("answers").innerHTML = 
+        "You are eligible to watch G and PG rated movies alone."
   } else {
-    document.getElementById("answers").innerHTML =
-      "You are too young for most things."
+      document.getElementById("answers").innerHTML = 
+        "You are most likely not eligible to watch any rated movies alone."
   }
 }

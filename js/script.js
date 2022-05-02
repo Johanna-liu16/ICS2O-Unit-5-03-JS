@@ -32,7 +32,7 @@ function myButtonClicked() {
         "You can watch PG-13 rated movies."
   } else if (fiveUp == true) {
       document.getElementById("answers").innerHTML = 
-        "You are eligible to watch G and PG rated movies alone."
+        "You can watch G and PG rated movies alone."
   } else {
       document.getElementById("answers").innerHTML = 
         "You are too young for most things."
